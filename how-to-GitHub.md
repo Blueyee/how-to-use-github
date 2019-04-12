@@ -24,12 +24,12 @@ ssh -keygen -t rsa -C "youremail@example.com"
 
 7.第七步：在Github上创建一个Git仓库，点New repository来创建，为了方便尽量名称和本地仓库一致
 
-8.将GitHub仓库和本地仓库进行关联，根据创建好的Git仓库页面的提示，找到这个仓库的SSH，形如https://github.com/你的GitHub用户名/这个仓库名.git，然后在本地仓库的命令行输入：git remote add origin https://github.com/你的GitHub用户名/这个仓库名.git
+8.将GitHub仓库和本地仓库进行关联，根据创建好的Git仓库页面的提示，找到这个仓库的SSH，形如https://github.com/你的GitHub用户名/这个仓库名.git， 然后在本地仓库的命令行输入：git remote add origin https://github.com/你的GitHub用户名/这个仓库名.git
 
 9.上一步将本地git仓库和GitHub仓库关联之后，就可以通过这个关联将本地Git仓库的内容推送到GitHub仓库上了，git push -u origin master，加上-u这个参数是因为新建的远程仓库是空的。等远程仓库里面有了内容之后，下次再从本地库上传内容就去掉这个参数，git push origin master
 
 10.这时候你再重新刷新你的Github页面进入刚才新建的那个仓库里面就会发现项目已经成功上传了
-注意：第7步创建远程仓库的时候，如果你勾选了Initialize this repository with a README（就是创建仓库的时候自动给你创建一个README文件），那么到了第9步你将本地仓库内容推送到远程仓库的时候就会报一个failed to push some refs to  https://github.com/**/***.git的错。这是由于你新创建的那个仓库里面的README文件不在本地仓库目录中，这时我们可以通过以下命令先将内容合并以下：git pull --rebase origin master，再push就能成功了
+注意：第7步创建远程仓库的时候，如果你勾选了Initialize this repository with a README（就是创建仓库的时候自动给你创建一个README文件），那么到了第9步你将本地仓库内容推送到远程仓库的时候就会报一个failed to push some refs to  https://github.com/**/***.git 的错。这是由于你新创建的那个仓库里面的README文件不在本地仓库目录中，这时我们可以通过以下命令先将内容合并以下：git pull --rebase origin master，再push就能成功了
 
 
 以上是首次创建的完整步骤。
