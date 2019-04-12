@@ -1,4 +1,4 @@
-GitHub使用教程 
+﻿GitHub使用教程 
 
 【首次创建仓库】
 
@@ -49,4 +49,10 @@ SSH加密的步骤只需要一次，因此再次创建仓库的话第5步，第�
 3.用注释内容描述此次更新，和后面会和新文件一起push进去，命令 git commit -m "注释内容”
 
 4.git push origin master将更新的文价和commit一起push到GitHub仓库。
+
+
+【GitHub仓库的更新同步到本地git仓库】
+
+git pull --rebase origin master
+
 
