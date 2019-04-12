@@ -42,11 +42,11 @@ SSH加密的步骤只需要一次，因此再次创建仓库的话第5步，第�
 
 将本地仓库的更新内容更新至GitHub
 
-1.git status查看当前状态，可以时不时查看一下
+1.git status查看当前状态，可以时不时查看一下，红色表示本地文件的被修改或加入的新文件，但此时只是放在这个路径下并没有添加进仓库，下一步git add过后git status 绿色表示已添加进本地的Git仓库，但并没有push进GitHub仓库。
 
 2.修改本地文件，或拖进去新的文件（注意此时还未加入这个仓库，需要下面的命令add进去），git status查看当前状态，git add . 添加所有新的文件，或git add * 将单个文件*加进去，git status
 
-3.用注释内容描述此次更新，和后面会和新文件一起push进去，命令 git commit -m "注释内容”
+3.用注释内容描述此次更新，和后面会和新文件一起push进去，命令 git commit -m "注释内容”，没有这步的话会连接失败
 
 4.git push origin master将更新的文价和commit一起push到GitHub仓库。
 
